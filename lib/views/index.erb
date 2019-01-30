@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>THPotin</title>
+</head>
+  <body>
+
+    <!--     --------------------------- navbar  ----------------- -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary d-flex">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <img src="icon.png" width="30" height="30" alt="icon THPotin" class="mr-auto">
+  <a class="navbar-brand" href="#">   THPotins !</a>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="thehackingproject.org">THP<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="https://www.youtube.com/watch?v=pM2qjHTZdeI">Important</a>
+    </div>
+  </div>
+</nav>
+
+<div><br>
+    <h1 class="d-flex justify-content-center">Bienvenu cher utilisateur!</h1><br>
+    <h2>Liste des potins</h2>
+    <div>
+          <% gossips.each.with_index do |gossip, i| %>
+            <div class="alert alert-dark alert-dismissible fade show" role="alert">
+    <a href ="/gossips/<%= i + 1 %>/" class="alert-link"><%= gossip.content %> </a> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+              <hr>
+              par <%= gossip.author %>
+            </div>
+          <% end %>             
+          
+          
+    	<p><br><br> </p>
+    </div>
+</div>
+<!-- ---------------------------PARAGRAPH------------------------------------- -->
+
+
+<br>
+<p class="text-center font-weight-bold"> THPotins est LE site pour baver sur tes camarades sois-disant codeurs. Eclate-toi et <a href="/gossips/new/" class="alert-link">cree un nouveau potin</a> des mainteant ! </p>
+
+
+
+<div class="jumbotron">
+<div class="d-flex flex-row justify-content-around text-center">
+  <div class"border">
+    <i class="fas fa-yin-yang fa-5x"></i><br><br>
+    <h1 class="display-8">Magic</h1>
+    <p class="lead">La magie du cracher sur tes potes en toute impunite.</p>
+  </div>
+  <div class"border">
+    <i class="fas fa-atom fa-5x"></i> <br><br>
+    <h1 class="display-8">Discretion</h1>
+    <p class="lead">Tu peux meme poster en mode anonyme.</p>
+  </div>
+  <div class"border">
+    <i class="fas fa-cross fa-5x"></i><br><br>
+    <h1 class="display-8">C'est toi le produit !</h1>
+    <p class="lead">Car si c'est gratuit, c'est bien que c'est toi le produit !.</p>
+  </div>
+</div>
+</div>
+
+
+    <!-- -----------------------__FOOTER ------------------ -->
+
+
+
+   <footer class="footer">
+      <div class="container d-flex justify-content-between">
+        <a href="#">Back to top</a>
+        <span class="text-muted">Made with love <i class="fab fa-angellist"></i> in Lyon</span>
+      </div>
+    </footer>
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
